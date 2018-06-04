@@ -1,6 +1,12 @@
 # mariadb++
 C++ client library for MariaDB. Uses the C connector.
 
+## Changes in this fork
+* Added a few configurations for:
+ * Static linking
+ * Possibility to use the mariadb repository directly (linking with mariadbclient).
+ * Choose if you want to build the tests
+
 ## Features
 * Prepared statements
 * Transactions and savepoints

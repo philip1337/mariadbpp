@@ -8,7 +8,12 @@
 //    (See accompanying file LICENSE or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
 
-#include <mysql/mysql.h>
+#ifndef MARIADBPP_HAS_DIRECT_INCLUDE
+	#include <mysql/mysql.h>
+#else
+	#include <mysql.h>
+#endif
+
 #include <memory.h>
 #include <mariadb++/connection.hpp>
 #include <mariadb++/result_set.hpp>

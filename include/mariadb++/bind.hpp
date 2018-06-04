@@ -10,7 +10,12 @@
 #ifndef _MARIADB_BIND_HPP_
 #define _MARIADB_BIND_HPP_
 
-#include <mysql/mysql.h>
+#ifndef MARIADBPP_HAS_DIRECT_INCLUDE
+	#include <mysql/mysql.h>
+#else
+	#include <mysql.h>
+#endif
+
 #include <mariadb++/types.hpp>
 #include <mariadb++/data.hpp>
 
